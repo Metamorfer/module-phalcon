@@ -10,6 +10,7 @@ use Codeception\Lib\Interfaces\ActiveRecord;
 use Codeception\Lib\Interfaces\PartedModule;
 use Codeception\TestInterface;
 use Codeception\Util\ReflectionHelper;
+use Symfony\Component\BrowserKit\AbstractBrowser;
 use PDOException;
 use Phalcon\Di;
 use Phalcon\Di\Injectable;
@@ -110,7 +111,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
 
     /**
      * Phalcon Connector
-     * @var PhalconConnector
+     * @var ?AbstractBrowser
      */
     public $client;
 
